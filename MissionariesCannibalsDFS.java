@@ -35,8 +35,11 @@ public class MissionariesCannibalsDFS {
         int M_right = M_total - M_left;
         int C_right = C_total - C_left;
 
+        //negative
         if (M_left < 0 || C_left < 0 || M_left > M_total || C_left > C_total) return false;
+        //outnumbered on left bank
         if (M_left > 0 && M_left < C_left) return false;
+        //outnumbered on right bank
         if (M_right > 0 && M_right < C_right) return false;
 
         return true;
